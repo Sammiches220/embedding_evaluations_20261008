@@ -1,0 +1,7 @@
+{
+  "column": "rating",
+  "kind": "categorical",
+  "spec": {
+    "kind": "categorical"
+  }
+}

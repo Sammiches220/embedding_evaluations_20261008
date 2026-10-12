@@ -1,0 +1,634 @@
+{
+  "run_id": "4e1e6c200efc4d4bab9c5c4840eae03f",
+  "mode": "source_only",
+  "config": {
+    "report_title": "Retail source audit \u00b7 synthetic"
+  },
+  "n_rows": 120,
+  "features": {
+    "order_key": {
+      "role": "id",
+      "id_type": "integer",
+      "canonicalization": "lossless_string"
+    },
+    "encoded_basket": {
+      "role": "embedding",
+      "expected_dimension": 8,
+      "format": "list"
+    },
+    "department": {
+      "role": "feature",
+      "kind": "categorical",
+      "id_type": "string",
+      "description": "Observed product department"
+    },
+    "partition_code": {
+      "role": "feature",
+      "kind": "cluster_label",
+      "id_type": "integer",
+      "missing_values": [
+        -1
+      ],
+      "metadata_path": "/workspace/scratch/6f0e6c536952/parquet_representation_audit/examples/retail/metadata/partition.json"
+    },
+    "units_sold": {
+      "role": "feature",
+      "kind": "count",
+      "units": "items"
+    },
+    "net_margin": {
+      "role": "feature",
+      "kind": "numeric",
+      "units": "USD"
+    },
+    "returned": {
+      "role": "feature",
+      "kind": "boolean"
+    },
+    "priority": {
+      "role": "feature",
+      "kind": "ordinal",
+      "order": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "derive": [
+        {
+          "name": "priority_value",
+          "operation": "ordinal_value",
+          "kind": "numeric",
+          "mapping": {
+            "low": 0,
+            "medium": 1,
+            "high": 2
+          },
+          "reasoning": "Explicit equal step coding for this synthetic operational urgency example",
+          "units": "priority steps"
+        }
+      ]
+    },
+    "basket_labels": {
+      "role": "feature",
+      "kind": "multilabel",
+      "encoding": "list",
+      "null_is_unknown": true,
+      "empty_is_unknown": false,
+      "min_count": 2,
+      "max_labels": 8
+    },
+    "purchased_time": {
+      "role": "feature",
+      "kind": "datetime",
+      "timezone": "UTC",
+      "derive": [
+        {
+          "name": "purchase_year",
+          "operation": "year",
+          "kind": "numeric",
+          "units": "calendar year"
+        }
+      ]
+    },
+    "customer_group": {
+      "role": "group"
+    },
+    "assignment": {
+      "role": "split",
+      "values": {
+        "train": "fit",
+        "test": "holdout"
+      }
+    },
+    "region": {
+      "role": "stratum"
+    },
+    "product_note": {
+      "role": "feature",
+      "kind": "text",
+      "derive": [
+        {
+          "name": "note_length",
+          "operation": "text_length",
+          "kind": "count",
+          "units": "characters"
+        }
+      ]
+    },
+    "predicted_department": {
+      "role": "prediction",
+      "target": "department",
+      "pipeline": "supplied_classifier"
+    },
+    "department_scores": {
+      "role": "probabilities",
+      "target": "department",
+      "pipeline": "supplied_classifier",
+      "label_order": [
+        "kitchen",
+        "outdoors",
+        "books"
+      ],
+      "encoding": "list"
+    },
+    "source_link": {
+      "role": "display"
+    },
+    "payload": {
+      "role": "ignore",
+      "reason": "Uninterpreted nested payload"
+    }
+  },
+  "generic_dataset": {
+    "name": "Synthetic retail orders",
+    "path": "/workspace/scratch/6f0e6c536952/parquet_representation_audit/examples/retail/orders.parquet",
+    "unmapped_columns": "error"
+  },
+  "semantic_inventory": {
+    "department": {
+      "role": "feature",
+      "kind": "categorical",
+      "id_type": "string",
+      "description": "Observed product department"
+    },
+    "partition_code": {
+      "role": "feature",
+      "kind": "cluster_label",
+      "id_type": "integer",
+      "missing_values": [
+        -1
+      ],
+      "metadata_path": "/workspace/scratch/6f0e6c536952/parquet_representation_audit/examples/retail/metadata/partition.json"
+    },
+    "units_sold": {
+      "role": "feature",
+      "kind": "count",
+      "units": "items"
+    },
+    "net_margin": {
+      "role": "feature",
+      "kind": "numeric",
+      "units": "USD"
+    },
+    "returned": {
+      "role": "feature",
+      "kind": "boolean"
+    },
+    "priority": {
+      "role": "feature",
+      "kind": "ordinal",
+      "order": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "derive": [
+        {
+          "name": "priority_value",
+          "operation": "ordinal_value",
+          "kind": "numeric",
+          "mapping": {
+            "low": 0,
+            "medium": 1,
+            "high": 2
+          },
+          "reasoning": "Explicit equal step coding for this synthetic operational urgency example",
+          "units": "priority steps"
+        }
+      ]
+    },
+    "basket_labels": {
+      "role": "feature",
+      "kind": "multilabel",
+      "encoding": "list",
+      "null_is_unknown": true,
+      "empty_is_unknown": false,
+      "min_count": 2,
+      "max_labels": 8
+    },
+    "purchased_time": {
+      "role": "feature",
+      "kind": "datetime",
+      "timezone": "UTC",
+      "derive": [
+        {
+          "name": "purchase_year",
+          "operation": "year",
+          "kind": "numeric",
+          "units": "calendar year"
+        }
+      ]
+    },
+    "product_note": {
+      "role": "feature",
+      "kind": "text",
+      "derive": [
+        {
+          "name": "note_length",
+          "operation": "text_length",
+          "kind": "count",
+          "units": "characters"
+        }
+      ]
+    },
+    "priority_value": {
+      "role": "feature",
+      "kind": "numeric",
+      "id_type": "string",
+      "units": "priority steps",
+      "description": "Derived ordinal_value from priority",
+      "provenance": {
+        "source": "priority",
+        "rule": {
+          "name": "priority_value",
+          "operation": "ordinal_value",
+          "kind": "numeric",
+          "mapping": {
+            "low": 0,
+            "medium": 1,
+            "high": 2
+          },
+          "reasoning": "Explicit equal step coding for this synthetic operational urgency example",
+          "units": "priority steps"
+        }
+      },
+      "geometry": true,
+      "probe": true,
+      "source_statistics": true
+    },
+    "purchase_year": {
+      "role": "feature",
+      "kind": "numeric",
+      "id_type": "string",
+      "units": "calendar year",
+      "description": "Derived year from purchased_time",
+      "provenance": {
+        "source": "purchased_time",
+        "rule": {
+          "name": "purchase_year",
+          "operation": "year",
+          "kind": "numeric",
+          "units": "calendar year"
+        }
+      },
+      "geometry": true,
+      "probe": true,
+      "source_statistics": true
+    },
+    "note_length": {
+      "role": "feature",
+      "kind": "count",
+      "id_type": "string",
+      "units": "characters",
+      "description": "Derived text_length from product_note",
+      "provenance": {
+        "source": "product_note",
+        "rule": {
+          "name": "note_length",
+          "operation": "text_length",
+          "kind": "count",
+          "units": "characters"
+        }
+      },
+      "geometry": true,
+      "probe": true,
+      "source_statistics": true
+    }
+  },
+  "feature_folders": {
+    "department": "features/001",
+    "partition_code": "features/002",
+    "units_sold": "features/003",
+    "net_margin": "features/004",
+    "returned": "features/005",
+    "priority": "features/006",
+    "basket_labels": "features/007",
+    "purchased_time": "features/008",
+    "product_note": "features/009",
+    "priority_value": "features/010",
+    "purchase_year": "features/011",
+    "note_length": "features/012"
+  },
+  "contract_version": 1,
+  "dataset_schema": {
+    "schema_version": 1,
+    "status": "validated",
+    "dataset": {
+      "name": "Synthetic retail orders",
+      "path": "/workspace/scratch/6f0e6c536952/parquet_representation_audit/examples/retail/orders.parquet",
+      "unmapped_columns": "error"
+    },
+    "columns": {
+      "order_key": {
+        "role": "id",
+        "id_type": "integer",
+        "canonicalization": "lossless_string"
+      },
+      "encoded_basket": {
+        "role": "embedding",
+        "expected_dimension": 8,
+        "format": "list"
+      },
+      "department": {
+        "role": "feature",
+        "kind": "categorical",
+        "id_type": "string",
+        "description": "Observed product department"
+      },
+      "partition_code": {
+        "role": "feature",
+        "kind": "cluster_label",
+        "id_type": "integer",
+        "missing_values": [
+          -1
+        ],
+        "metadata_path": "/workspace/scratch/6f0e6c536952/parquet_representation_audit/examples/retail/metadata/partition.json"
+      },
+      "units_sold": {
+        "role": "feature",
+        "kind": "count",
+        "units": "items"
+      },
+      "net_margin": {
+        "role": "feature",
+        "kind": "numeric",
+        "units": "USD"
+      },
+      "returned": {
+        "role": "feature",
+        "kind": "boolean"
+      },
+      "priority": {
+        "role": "feature",
+        "kind": "ordinal",
+        "order": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "derive": [
+          {
+            "name": "priority_value",
+            "operation": "ordinal_value",
+            "kind": "numeric",
+            "mapping": {
+              "low": 0,
+              "medium": 1,
+              "high": 2
+            },
+            "reasoning": "Explicit equal step coding for this synthetic operational urgency example",
+            "units": "priority steps"
+          }
+        ]
+      },
+      "basket_labels": {
+        "role": "feature",
+        "kind": "multilabel",
+        "encoding": "list",
+        "null_is_unknown": true,
+        "empty_is_unknown": false,
+        "min_count": 2,
+        "max_labels": 8
+      },
+      "purchased_time": {
+        "role": "feature",
+        "kind": "datetime",
+        "timezone": "UTC",
+        "derive": [
+          {
+            "name": "purchase_year",
+            "operation": "year",
+            "kind": "numeric",
+            "units": "calendar year"
+          }
+        ]
+      },
+      "customer_group": {
+        "role": "group"
+      },
+      "assignment": {
+        "role": "split",
+        "values": {
+          "train": "fit",
+          "test": "holdout"
+        }
+      },
+      "region": {
+        "role": "stratum"
+      },
+      "product_note": {
+        "role": "feature",
+        "kind": "text",
+        "derive": [
+          {
+            "name": "note_length",
+            "operation": "text_length",
+            "kind": "count",
+            "units": "characters"
+          }
+        ]
+      },
+      "predicted_department": {
+        "role": "prediction",
+        "target": "department",
+        "pipeline": "supplied_classifier"
+      },
+      "department_scores": {
+        "role": "probabilities",
+        "target": "department",
+        "pipeline": "supplied_classifier",
+        "label_order": [
+          "kitchen",
+          "outdoors",
+          "books"
+        ],
+        "encoding": "list"
+      },
+      "source_link": {
+        "role": "display"
+      },
+      "payload": {
+        "role": "ignore",
+        "reason": "Uninterpreted nested payload"
+      }
+    },
+    "embeddings": [],
+    "prediction_pipelines": {
+      "supplied_classifier": {
+        "uses_embedding": "unknown",
+        "description": "Synthetic provided predictions; illustrative only",
+        "provenance": {
+          "synthetic": true
+        }
+      }
+    },
+    "weights": "unweighted"
+  },
+  "audit_config": {
+    "schema_version": 1,
+    "mode": "source_only",
+    "seed": 19,
+    "sample": {
+      "strategy": "uniform_rows",
+      "max_rows": 120
+    },
+    "source": {
+      "scope": "full",
+      "batch_rows": 64,
+      "max_vocabulary": 10000,
+      "quantile_sample_size": 1000,
+      "max_feature_columns": 100
+    },
+    "limits": {
+      "max_evaluation_rows": 5000,
+      "max_embedding_bytes": 512000000,
+      "max_exact_pairs": 12500000,
+      "max_dense_feature_bytes": 64000000,
+      "max_external_ids": 10000000,
+      "external_batch_rows": 128,
+      "max_source_batch_bytes": 128000000,
+      "max_source_batch_cells": 1000000,
+      "max_work_units": 200000000
+    },
+    "geometry": {
+      "enabled": false,
+      "metric": "cosine",
+      "ks": [
+        3,
+        8,
+        20
+      ],
+      "invalid_embeddings": "exclude",
+      "reference": "evaluation",
+      "distance_cap": 100,
+      "distance_pairs": 2000
+    },
+    "nulls": {
+      "permutations": 3,
+      "modes": [
+        "permutation",
+        "stratified"
+      ],
+      "correction": "bh",
+      "testing_family": "all_features_scales_modes_per_metric",
+      "stratum_column": "region"
+    },
+    "probes": {
+      "enabled": false,
+      "models": [
+        "baseline",
+        "linear"
+      ],
+      "max_labels": 6,
+      "trees": 40,
+      "regularization_grid": [
+        1.0
+      ],
+      "group_column": "customer_group",
+      "split_column": "assignment"
+    },
+    "normalization": {
+      "enabled": false,
+      "max_rows": 5000,
+      "regularization_grid": [
+        1.0
+      ]
+    },
+    "topology": {
+      "enabled": false,
+      "spaces": [
+        "raw_euclidean",
+        "unit_chordal"
+      ],
+      "sample_size": 32,
+      "repetitions": 2,
+      "permutations": 3,
+      "h1": true,
+      "h1_sample_size": 12,
+      "max_simplices": 5000,
+      "quantiles": [
+        0,
+        0.05,
+        0.2,
+        0.5,
+        1.0
+      ]
+    },
+    "missingness": {
+      "enabled": false,
+      "features": [
+        "department"
+      ],
+      "fractions": [
+        0.2
+      ],
+      "modes": [
+        "random"
+      ]
+    },
+    "report": {
+      "title": "Retail source audit \u00b7 synthetic",
+      "row_explorer": true,
+      "max_rows": 500,
+      "max_bytes": 8000000,
+      "pca": true,
+      "overview": {
+        "min_known": 15,
+        "min_test": 10,
+        "min_known_neighbor_share": 0.5,
+        "trusted_ks": [
+          3,
+          8,
+          20
+        ]
+      }
+    },
+    "comparison": {
+      "bootstraps": 30
+    },
+    "output_policy": "fresh",
+    "verbose": true
+  },
+  "source_scope": "full",
+  "source_population_rows": 160,
+  "evaluation_sample": {
+    "strategy": "uniform_rows",
+    "requested_rows": 120,
+    "common_valid_rows": 120,
+    "seed": 19,
+    "estimand": "Uniform file-row sample before validity filtering; common valid cohort thereafter"
+  },
+  "alignment": {
+    "identity": "Exact full-file disk-backed uniqueness",
+    "excluded_rows": 0,
+    "records": "asset_alignment.csv",
+    "evaluation_positions": "evaluation_sample.csv"
+  },
+  "weights": "unweighted",
+  "versions": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.17.0",
+    "scikit-learn": "1.8.0",
+    "pyarrow": "26.0.0",
+    "jsonschema": "4.26.0"
+  },
+  "python": "3.12.14",
+  "supplied_graph_contracts": [],
+  "resource_estimates": {
+    "estimated_embedding_working_bytes": 0,
+    "estimated_geometry_work": 115200
+  },
+  "full_vector_validation": "Only retained evaluation vectors validated; external matrix headers and all source IDs checked",
+  "correction": {
+    "method": "bh",
+    "family": "all_features_scales_modes_per_metric"
+  },
+  "limitations": [
+    "Expensive analyses are bounded sampled in-memory experiments. Source counts/moments stream; quantiles may be reservoir estimates.",
+    "Uniform row sampling does not balance groups; supplied groups prevent train/test leakage and optionally bootstrap groups.",
+    "External ID lookup is population-sized and explicitly capped. Source identity uniqueness uses temporary disk SQLite.",
+    "One external prediction pipeline per target per run. No automatic ANN backend or encoder retraining.",
+    "Repeated topology samples give descriptive variability; conditional graph bootstraps do not account for retraining or search errors."
+  ]
+}

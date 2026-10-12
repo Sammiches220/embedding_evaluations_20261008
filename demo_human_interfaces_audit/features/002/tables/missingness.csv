@@ -1,0 +1,3 @@
+mode,missing_fraction,n_hidden,n_train,status,n_compared,accuracy,balanced_accuracy,macro_f1,micro_f1,entropy_delta,normalized_entropy_delta,largest_label_share_delta,n_labels_delta,jensen_shannon_divergence,reconstructed_entropy_delta,reconstructed_normalized_entropy_delta,reconstructed_largest_label_share_delta,reconstructed_n_labels_delta,reconstructed_jensen_shannon_divergence
+random,0.25,89,150,ok,89,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0,0.0
+rare-first,0.25,89,262,ok,89,0.02247191011235955,0.5,0.04938271604938271,0.02247191011235955,0.4862908733409513,0.7015694313985534,-0.2584269662921348,0,0.942215967336823,-0.4132988784287308,-0.04425438155680894,0.18028169014084505,-1,0.1351144247486915

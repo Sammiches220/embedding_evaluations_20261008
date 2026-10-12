@@ -1,0 +1,21 @@
+{
+  "kind": "numeric",
+  "units": "priority steps",
+  "n_items": 160,
+  "n_known": 160,
+  "coverage": 1.0,
+  "scope": "Full Parquet source population",
+  "algorithm": "exact batched counts/moments",
+  "weighted": false,
+  "mean": 0.99375,
+  "variance": 0.6687109375,
+  "min": 0.0,
+  "max": 2.0,
+  "quantile_algorithm": "exact",
+  "quantile_sample_n": 160,
+  "q05": 0.0,
+  "q25": 0.0,
+  "q50": 1.0,
+  "q75": 2.0,
+  "q95": 2.0
+}

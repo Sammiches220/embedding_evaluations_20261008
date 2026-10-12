@@ -1,0 +1,5 @@
+label,label_name,label_criteria,n_items,excluded_from_evaluation,metadata_excluded_from_coverage
+-1,Unassigned,Synthetic missing assignment,0,False,True
+0,Segment A,Declared assignment code 0,34,False,False
+1,Segment A,Distinct computational ID 1 despite duplicate display name,43,False,False
+2,Segment C,Declared assignment code 2,36,False,False

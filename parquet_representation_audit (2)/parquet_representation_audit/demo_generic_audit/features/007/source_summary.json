@@ -1,0 +1,14 @@
+{
+  "n_items": 119,
+  "n_known": 111,
+  "coverage": 0.9327731092436975,
+  "missing_share": 0.0672268907563025,
+  "n_labels": 3,
+  "n_audited_labels": 3,
+  "entropy": 0.9900011067427861,
+  "normalized_entropy": 0.9011378417612667,
+  "largest_label_share": 0.5609756097560976,
+  "largest_item_prevalence": 0.6216216216216216,
+  "mean_labels_per_known_item": 1.1081081081081081,
+  "audited_occurrence_share": 1.0
+}

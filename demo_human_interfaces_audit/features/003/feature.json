@@ -1,0 +1,7 @@
+{
+  "column": "score",
+  "kind": "continuous",
+  "spec": {
+    "kind": "continuous"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "n_items": 355,
+  "n_known": 355,
+  "coverage": 1.0,
+  "missing_share": 0.0,
+  "n_labels": 4,
+  "n_audited_labels": 4,
+  "entropy": 1.2458949918165014,
+  "normalized_entropy": 0.8987232630810311,
+  "largest_label_share": 0.4591549295774648
+}

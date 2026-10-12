@@ -1,0 +1,12 @@
+{
+  "column": "score_bin_cluster",
+  "kind": "categorical",
+  "spec": {
+    "kind": "categorical",
+    "missing_values": [
+      0
+    ],
+    "cluster_ids": true,
+    "metadata_file": "/workspace/scratch/bb9e9d5e1b6b/project/embedding_feature_audit/examples/cluster_metadata/score_bin.json"
+  }
+}

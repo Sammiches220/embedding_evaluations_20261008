@@ -1,0 +1,4 @@
+label,count,prevalence,occurrence_share,label_id,label_name,label_criteria,label_display,label_metadata_known
+1,50,0.3333333333333333,0.3333333333333333,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True
+2,50,0.3333333333333333,0.3333333333333333,2,Segment C,Declared assignment code 2,2 · Segment C,True
+0,50,0.3333333333333333,0.3333333333333333,0,Segment A,Declared assignment code 0,0 · Segment A,True

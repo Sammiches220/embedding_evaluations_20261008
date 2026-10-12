@@ -1,0 +1,195 @@
+{
+  "dataset_schema": {
+    "schema_version": 1,
+    "status": "validated",
+    "dataset": {
+      "name": "Synthetic instrument readings",
+      "path": "/workspace/scratch/6f0e6c536952/parquet_representation_audit/examples/telemetry/readings.parquet",
+      "unmapped_columns": "error"
+    },
+    "columns": {
+      "reading_ref": {
+        "role": "id",
+        "id_type": "string",
+        "canonicalization": "lossless_string"
+      },
+      "condition": {
+        "role": "feature",
+        "kind": "categorical",
+        "id_type": "string"
+      },
+      "pulse_count": {
+        "role": "feature",
+        "kind": "count",
+        "units": "pulses"
+      },
+      "temperature": {
+        "role": "feature",
+        "kind": "numeric",
+        "units": "degrees C",
+        "invalid_values": "unknown"
+      },
+      "alarms": {
+        "role": "feature",
+        "kind": "multilabel",
+        "encoding": "delimited",
+        "delimiter": "|",
+        "case": "preserve",
+        "empty_is_unknown": false,
+        "min_count": 2,
+        "max_labels": 6
+      },
+      "calibration_ok": {
+        "role": "feature",
+        "kind": "boolean"
+      },
+      "station_id": {
+        "role": "group"
+      },
+      "engineer_note": {
+        "role": "feature",
+        "kind": "text"
+      }
+    },
+    "embeddings": [
+      {
+        "name": "Instrument A",
+        "matrix_path": "/workspace/scratch/6f0e6c536952/parquet_representation_audit/examples/telemetry/encoder_a.npy",
+        "ids_path": "/workspace/scratch/6f0e6c536952/parquet_representation_audit/examples/telemetry/encoder_a_ids.npy",
+        "expected_dimension": 6,
+        "main_normalization": "none"
+      },
+      {
+        "name": "Instrument B",
+        "matrix_path": "/workspace/scratch/6f0e6c536952/parquet_representation_audit/examples/telemetry/encoder_b.npy",
+        "ids_path": "/workspace/scratch/6f0e6c536952/parquet_representation_audit/examples/telemetry/encoder_b_ids.npy",
+        "expected_dimension": 10,
+        "main_normalization": "none"
+      }
+    ],
+    "_schema_path": "/workspace/scratch/6f0e6c536952/parquet_representation_audit/examples/telemetry/dataset_schema.json"
+  },
+  "audit_config": {
+    "schema_version": 1,
+    "mode": "embedding",
+    "seed": 19,
+    "sample": {
+      "strategy": "uniform_rows",
+      "max_rows": 120
+    },
+    "source": {
+      "scope": "full",
+      "batch_rows": 64,
+      "max_vocabulary": 10000,
+      "quantile_sample_size": 1000,
+      "max_feature_columns": 100
+    },
+    "limits": {
+      "max_evaluation_rows": 5000,
+      "max_embedding_bytes": 512000000,
+      "max_exact_pairs": 12500000,
+      "max_dense_feature_bytes": 64000000,
+      "max_external_ids": 10000000,
+      "external_batch_rows": 128,
+      "max_source_batch_bytes": 128000000,
+      "max_source_batch_cells": 1000000,
+      "max_work_units": 200000000
+    },
+    "geometry": {
+      "enabled": true,
+      "metric": "cosine",
+      "ks": [
+        3,
+        8,
+        20
+      ],
+      "invalid_embeddings": "exclude",
+      "reference": "evaluation",
+      "distance_cap": 100,
+      "distance_pairs": 2000
+    },
+    "nulls": {
+      "permutations": 3,
+      "modes": [
+        "permutation"
+      ],
+      "correction": "bh",
+      "testing_family": "all_features_scales_modes_per_metric"
+    },
+    "probes": {
+      "enabled": true,
+      "models": [
+        "baseline",
+        "linear"
+      ],
+      "max_labels": 6,
+      "trees": 40,
+      "regularization_grid": [
+        1.0
+      ],
+      "group_column": "station_id"
+    },
+    "normalization": {
+      "enabled": true,
+      "max_rows": 5000,
+      "regularization_grid": [
+        1.0
+      ]
+    },
+    "topology": {
+      "enabled": true,
+      "spaces": [
+        "raw_euclidean",
+        "unit_chordal"
+      ],
+      "sample_size": 32,
+      "repetitions": 2,
+      "permutations": 3,
+      "h1": true,
+      "h1_sample_size": 12,
+      "max_simplices": 5000,
+      "quantiles": [
+        0,
+        0.05,
+        0.2,
+        0.5,
+        1.0
+      ]
+    },
+    "missingness": {
+      "enabled": true,
+      "features": [
+        "condition"
+      ],
+      "fractions": [
+        0.2
+      ],
+      "modes": [
+        "random"
+      ]
+    },
+    "report": {
+      "title": "Telemetry A/B representation audit \u00b7 synthetic",
+      "row_explorer": true,
+      "max_rows": 500,
+      "max_bytes": 8000000,
+      "pca": true,
+      "overview": {
+        "min_known": 15,
+        "min_test": 10,
+        "min_known_neighbor_share": 0.5,
+        "trusted_ks": [
+          3,
+          8,
+          20
+        ]
+      }
+    },
+    "comparison": {
+      "bootstraps": 30
+    },
+    "output_policy": "fresh",
+    "verbose": true,
+    "_config_path": "/workspace/scratch/6f0e6c536952/parquet_representation_audit/examples/telemetry/audit_config.json"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "column": "temperature",
+  "kind": "continuous",
+  "spec": {
+    "kind": "continuous",
+    "semantic_kind": "numeric",
+    "description": "",
+    "units": "degrees C",
+    "family": "",
+    "missing_values": [],
+    "empty_is_missing": false,
+    "min_count": 1,
+    "max_labels": 100
+  }
+}

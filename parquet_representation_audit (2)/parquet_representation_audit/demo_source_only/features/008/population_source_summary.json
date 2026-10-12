@@ -1,0 +1,15 @@
+{
+  "kind": "datetime",
+  "units": "",
+  "n_items": 160,
+  "n_known": 160,
+  "coverage": 1.0,
+  "scope": "Full Parquet source population",
+  "algorithm": "exact batched counts/moments",
+  "weighted": false,
+  "min": "2024-01-01T00:00:00+00:00",
+  "max": "2027-01-18T00:00:00+00:00",
+  "timezone": "UTC",
+  "geometry": "unavailable without explicit derived target",
+  "probe": "unavailable without explicit derived target"
+}

@@ -1,0 +1,13 @@
+feature,kind,coverage,status
+department,categorical,1.0,source_only
+partition_code,cluster_label,0.9375,source_only
+units_sold,count,1.0,source_only
+net_margin,numeric,1.0,source_only
+returned,boolean,1.0,source_only
+priority,ordinal,1.0,source_only
+basket_labels,multilabel,0.94375,source_only
+purchased_time,datetime,1.0,source_only
+product_note,text,1.0,source_only
+priority_value,numeric,1.0,source_only
+purchase_year,numeric,1.0,source_only
+note_length,count,1.0,source_only

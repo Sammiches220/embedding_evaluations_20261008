@@ -1,0 +1,15 @@
+{
+  "kind": "boolean",
+  "units": "",
+  "n_items": 160,
+  "n_known": 160,
+  "coverage": 1.0,
+  "scope": "Full Parquet source population",
+  "algorithm": "exact batched counts/moments",
+  "weighted": false,
+  "n_labels": 2,
+  "entropy": 0.5004024235381879,
+  "normalized_entropy": 0.7219280948873623,
+  "largest_label_share": 0.8,
+  "largest_item_prevalence": 0.8
+}

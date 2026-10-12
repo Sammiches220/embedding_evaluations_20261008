@@ -1,0 +1,8 @@
+{
+  "labels": [
+    "fault",
+    "nominal",
+    "warning"
+  ],
+  "selection": "first selected source labels; full geometry vocabulary may be larger"
+}

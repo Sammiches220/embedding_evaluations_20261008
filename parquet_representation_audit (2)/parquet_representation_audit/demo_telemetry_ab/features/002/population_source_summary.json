@@ -1,0 +1,21 @@
+{
+  "kind": "count",
+  "units": "pulses",
+  "n_items": 144,
+  "n_known": 144,
+  "coverage": 1.0,
+  "scope": "Full Parquet source population",
+  "algorithm": "exact batched counts/moments",
+  "weighted": false,
+  "mean": 4.0,
+  "variance": 6.666666666666667,
+  "min": 0.0,
+  "max": 8.0,
+  "quantile_algorithm": "exact",
+  "quantile_sample_n": 144,
+  "q05": 0.0,
+  "q25": 2.0,
+  "q50": 4.0,
+  "q75": 6.0,
+  "q95": 8.0
+}

@@ -1,0 +1,9 @@
+{
+  "column": "tag_string_general",
+  "kind": "multilabel",
+  "spec": {
+    "kind": "multilabel",
+    "min_count": 2,
+    "max_labels": 100
+  }
+}

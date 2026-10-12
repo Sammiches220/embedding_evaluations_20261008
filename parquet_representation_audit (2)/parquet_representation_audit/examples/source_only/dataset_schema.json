@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "status": "validated",
+  "dataset": {
+    "name": "Synthetic retail orders",
+    "path": "../retail/orders.parquet",
+    "unmapped_columns": "error"
+  },
+  "columns": {
+    "order_key": {
+      "role": "id",
+      "id_type": "integer",
+      "canonicalization": "lossless_string"
+    },
+    "encoded_basket": {
+      "role": "embedding",
+      "expected_dimension": 8,
+      "format": "list"
+    },
+    "department": {
+      "role": "feature",
+      "kind": "categorical",
+      "id_type": "string",
+      "description": "Observed product department"
+    },
+    "partition_code": {
+      "role": "feature",
+      "kind": "cluster_label",
+      "id_type": "integer",
+      "missing_values": [
+        -1
+      ],
+      "metadata_path": "../retail/metadata/partition.json"
+    },
+    "units_sold": {
+      "role": "feature",
+      "kind": "count",
+      "units": "items"
+    },
+    "net_margin": {
+      "role": "feature",
+      "kind": "numeric",
+      "units": "USD"
+    },
+    "returned": {
+      "role": "feature",
+      "kind": "boolean"
+    },
+    "priority": {
+      "role": "feature",
+      "kind": "ordinal",
+      "order": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "derive": [
+        {
+          "name": "priority_value",
+          "operation": "ordinal_value",
+          "kind": "numeric",
+          "mapping": {
+            "low": 0,
+            "medium": 1,
+            "high": 2
+          },
+          "reasoning": "Explicit equal step coding for this synthetic operational urgency example",
+          "units": "priority steps"
+        }
+      ]
+    },
+    "basket_labels": {
+      "role": "feature",
+      "kind": "multilabel",
+      "encoding": "list",
+      "null_is_unknown": true,
+      "empty_is_unknown": false,
+      "min_count": 2,
+      "max_labels": 8
+    },
+    "purchased_time": {
+      "role": "feature",
+      "kind": "datetime",
+      "timezone": "UTC",
+      "derive": [
+        {
+          "name": "purchase_year",
+          "operation": "year",
+          "kind": "numeric",
+          "units": "calendar year"
+        }
+      ]
+    },
+    "customer_group": {
+      "role": "group"
+    },
+    "assignment": {
+      "role": "split",
+      "values": {
+        "train": "fit",
+        "test": "holdout"
+      }
+    },
+    "region": {
+      "role": "stratum"
+    },
+    "product_note": {
+      "role": "feature",
+      "kind": "text",
+      "derive": [
+        {
+          "name": "note_length",
+          "operation": "text_length",
+          "kind": "count",
+          "units": "characters"
+        }
+      ]
+    },
+    "predicted_department": {
+      "role": "prediction",
+      "target": "department",
+      "pipeline": "supplied_classifier"
+    },
+    "department_scores": {
+      "role": "probabilities",
+      "target": "department",
+      "pipeline": "supplied_classifier",
+      "label_order": [
+        "kitchen",
+        "outdoors",
+        "books"
+      ],
+      "encoding": "list"
+    },
+    "source_link": {
+      "role": "display"
+    },
+    "payload": {
+      "role": "ignore",
+      "reason": "Uninterpreted nested payload"
+    }
+  },
+  "embeddings": [],
+  "prediction_pipelines": {
+    "supplied_classifier": {
+      "uses_embedding": "unknown",
+      "description": "Synthetic provided predictions; illustrative only",
+      "provenance": {
+        "synthetic": true
+      }
+    }
+  },
+  "weights": "unweighted"
+}

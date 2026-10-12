@@ -1,0 +1,3 @@
+model,status,n_train,n_test,n_compared,r2,mae,spearman,fit_seconds,convergence_warnings,max_iterations,selected_regularization,tuning
+baseline,ok,265,90,90,-0.11929115293511594,0.4057302585604471,,0.00013798800000586198,0,,,fixed
+linear,ok,265,90,90,0.9569047909912407,0.0708854380213184,0.9626946993125363,0.0009100900001612899,0,,1.0,fixed

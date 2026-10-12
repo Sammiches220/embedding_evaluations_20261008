@@ -1,0 +1,85 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "name": {
+      "type": "string"
+    },
+    "id_type": {
+      "enum": [
+        "integer",
+        "string",
+        "boolean"
+      ]
+    },
+    "origin": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "source_fields": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "reasoning": {
+      "type": "string"
+    },
+    "excluded_from_coverage": {
+      "type": "array",
+      "items": {
+        "type": [
+          "string",
+          "number",
+          "boolean",
+          "null"
+        ]
+      }
+    },
+    "labels": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": [
+              "string",
+              "number",
+              "boolean",
+              "null"
+            ]
+          },
+          "name": {
+            "type": "string"
+          },
+          "criteria": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "name"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "name",
+    "id_type",
+    "labels",
+    "excluded_from_coverage"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/parquet-audit/v1/label_metadata.schema.json",
+  "title": "label_metadata v1"
+}

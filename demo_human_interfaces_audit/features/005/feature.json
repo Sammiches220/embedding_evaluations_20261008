@@ -1,0 +1,7 @@
+{
+  "column": "file_ext",
+  "kind": "categorical",
+  "spec": {
+    "kind": "categorical"
+  }
+}

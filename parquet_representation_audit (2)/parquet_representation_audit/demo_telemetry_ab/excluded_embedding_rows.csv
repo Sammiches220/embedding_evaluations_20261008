@@ -1,0 +1,3 @@
+item_id,source_position,reason
+000011,11,Instrument A:zero_direction
+000022,22,Instrument B:nonfinite_vector

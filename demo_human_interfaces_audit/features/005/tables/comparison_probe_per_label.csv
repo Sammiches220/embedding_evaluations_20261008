@@ -1,0 +1,5 @@
+label,precision,recall,f1,support,true_prevalence,predicted_prevalence,roc_auc,average_precision,model
+jpg,0.4,1.0,0.5714285714285714,36,0.4,1.0,0.5,0.4,baseline
+png,0.0,0.0,0.0,54,0.6,0.0,0.5,0.6,baseline
+jpg,1.0,1.0,1.0,36,0.4,0.4,1.0,1.0,linear
+png,1.0,1.0,1.0,54,0.6,0.6,1.0,1.0,linear

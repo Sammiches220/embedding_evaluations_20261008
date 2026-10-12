@@ -1,0 +1,7 @@
+{
+  "column": "fav_count",
+  "kind": "continuous",
+  "spec": {
+    "kind": "continuous"
+  }
+}

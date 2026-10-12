@@ -1,0 +1,20 @@
+{
+  "column": "basket_labels",
+  "kind": "multilabel",
+  "spec": {
+    "kind": "multilabel",
+    "semantic_kind": "multilabel",
+    "description": "",
+    "units": "",
+    "family": "",
+    "missing_values": [],
+    "empty_is_missing": false,
+    "min_count": 2,
+    "max_labels": 8,
+    "vocabulary": [
+      "daily",
+      "gift",
+      "seasonal"
+    ]
+  }
+}

@@ -1,0 +1,240 @@
+{
+  "run_id": "1653cf4092ce4c19be1afaaae7ba4112",
+  "n_rows": 355,
+  "n_input_rows": 360,
+  "n_excluded_embedding_rows": 5,
+  "embedding_dimensions": 16,
+  "embedding_memory_mib": 0.02166748046875,
+  "graph_source": "exact brute-force search on this sample",
+  "requested_ks": [
+    5,
+    10,
+    25,
+    50
+  ],
+  "evaluated_ks": [
+    5,
+    10,
+    25,
+    50
+  ],
+  "config": {
+    "id_column": "id",
+    "embedding_column": "embedding",
+    "metric": "cosine",
+    "ks": [
+      5,
+      10,
+      25,
+      50
+    ],
+    "permutations": 5,
+    "null_modes": [
+      "permutation"
+    ],
+    "seed": 42,
+    "probe_features": true,
+    "probe_models": [
+      "baseline",
+      "linear"
+    ],
+    "max_probe_labels": 10,
+    "trees": 20,
+    "missingness_features": [
+      "rating"
+    ],
+    "missingness_fractions": [
+      0.25
+    ],
+    "missingness_modes": [
+      "random",
+      "rare-first"
+    ],
+    "predictions": {
+      "rating": {
+        "column": "predicted_rating",
+        "uses_embedding": false
+      }
+    },
+    "population_prevalence": {},
+    "pca_overview": true,
+    "verbose": true,
+    "cluster_metadata_dir": "/workspace/scratch/bb9e9d5e1b6b/project/embedding_feature_audit/examples/cluster_metadata",
+    "cluster_metadata": {},
+    "explorer": true,
+    "explorer_max_rows": 10000,
+    "explorer_max_bytes": 80000000,
+    "comparison_bootstraps": 100,
+    "drop_invalid_embeddings": true,
+    "embedding_name": "Character-oriented A",
+    "comparison_name": "Subject-oriented B",
+    "cohorts": {
+      "Seed cohort": [
+        "1010",
+        "1011",
+        "1012",
+        "1013",
+        "1014",
+        "1015",
+        "1016",
+        "1017",
+        "1018",
+        "1019",
+        "1020",
+        "1021",
+        "1022",
+        "1023",
+        "1024",
+        "1025"
+      ]
+    },
+    "overview": {},
+    "embedding_normalization": "none",
+    "normalization_analysis": {
+      "enabled": true,
+      "features": true,
+      "regularization_grid": [
+        1.0
+      ]
+    },
+    "topology": {
+      "enabled": true,
+      "sample_size": 128,
+      "repetitions": 2,
+      "spaces": [
+        "unit_chordal",
+        "raw_euclidean"
+      ],
+      "permutations": 5,
+      "h1_sample_size": 48,
+      "quantiles": [
+        0,
+        0.005,
+        0.01,
+        0.025,
+        0.05,
+        0.1,
+        0.25,
+        0.5,
+        1
+      ]
+    },
+    "group_column": "family",
+    "features": {
+      "score_bin_cluster": "categorical",
+      "rating": "categorical",
+      "score": "continuous",
+      "fav_count": "continuous",
+      "file_ext": "categorical",
+      "megapixels": "continuous",
+      "aspect_ratio": "continuous",
+      "tag_string_general": {
+        "kind": "multilabel",
+        "min_count": 2,
+        "max_labels": 100
+      },
+      "tag_string_character": {
+        "kind": "multilabel",
+        "min_count": 2,
+        "max_labels": 100
+      }
+    }
+  },
+  "features": {
+    "score_bin_cluster": {
+      "kind": "categorical",
+      "missing_values": [
+        0
+      ],
+      "cluster_ids": true,
+      "metadata_file": "/workspace/scratch/bb9e9d5e1b6b/project/embedding_feature_audit/examples/cluster_metadata/score_bin.json"
+    },
+    "rating": {
+      "kind": "categorical"
+    },
+    "score": {
+      "kind": "continuous"
+    },
+    "fav_count": {
+      "kind": "continuous"
+    },
+    "file_ext": {
+      "kind": "categorical"
+    },
+    "megapixels": {
+      "kind": "continuous"
+    },
+    "aspect_ratio": {
+      "kind": "continuous"
+    },
+    "tag_string_general": {
+      "kind": "multilabel",
+      "min_count": 2,
+      "max_labels": 100
+    },
+    "tag_string_character": {
+      "kind": "multilabel",
+      "min_count": 2,
+      "max_labels": 100
+    }
+  },
+  "metadata_features": [
+    "score_bin_cluster"
+  ],
+  "reference_scope": "Supplied sample; external prevalence only where explicitly configured",
+  "embedding_preprocessing": "none",
+  "missingness_predictor": "embedding-based kNN demo; not independent evidence",
+  "neighborhood_missingness": "fixed full-sample neighborhoods; purity denominator uses known neighbors only",
+  "limitations": [
+    "Exact graph construction costs approximately O(N\u00b2D); permutations reuse it.",
+    "Probe scores use one fixed held-out split. Macro tag scores exclude unsupported training tags.",
+    "Tag absence is only a negative among rows configured as annotated; incomplete annotation can bias it.",
+    "No prediction accuracy is claimed for naturally missing labels without observed truth.",
+    "Permutation p-values are empirical; z-scores are descriptive, not a normality guarantee."
+  ],
+  "comparison": {
+    "name": "Subject-oriented B",
+    "dimensions": 24,
+    "graph_source": "exact brute-force search on the same common cohort",
+    "scope": "Same common valid cohort, candidate pool, annotations, metric and k; per-anchor paired geometry.",
+    "uncertainty": "Percentile bootstrap conditional on fixed graphs; group_column controls group resampling. Shared neighborhoods may induce dependence; no retraining or search-error uncertainty."
+  },
+  "feature_status": {
+    "score_bin_cluster": "ok",
+    "rating": "ok",
+    "score": "ok",
+    "fav_count": "ok",
+    "file_ext": "ok",
+    "megapixels": "ok",
+    "aspect_ratio": "ok",
+    "tag_string_general": "ok",
+    "tag_string_character": "ok"
+  },
+  "feature_folders": {
+    "score_bin_cluster": "features/001",
+    "rating": "features/002",
+    "score": "features/003",
+    "fav_count": "features/004",
+    "file_ext": "features/005",
+    "megapixels": "features/006",
+    "aspect_ratio": "features/007",
+    "tag_string_general": "features/008",
+    "tag_string_character": "features/009"
+  },
+  "enhancements": {
+    "normalization": {
+      "status": "ok",
+      "scope": "Same evaluated rows and train/test split per feature across input variants; source norms measured before optional main normalization."
+    },
+    "topology": {
+      "status": "ok",
+      "scope": "Seeded uniform samples of evaluated rows; identical IDs across models and spaces. H1 uses an explicit smaller subset of the first sample."
+    }
+  },
+  "explorer": {
+    "available": true,
+    "max_rows": 10000,
+    "reason": null,
+    "scope": "Full evaluated sample; no hidden row subsampling"
+  }
+}

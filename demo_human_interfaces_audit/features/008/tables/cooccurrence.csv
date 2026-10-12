@@ -1,0 +1,13 @@
+label_a,label_b,count
+day,palette_0,88
+day,water,88
+day,landscape,88
+day,palette_1,88
+palette_0,water,84
+palette_0,landscape,84
+palette_0,night,80
+water,palette_1,83
+water,night,79
+landscape,palette_1,82
+landscape,night,78
+palette_1,night,77

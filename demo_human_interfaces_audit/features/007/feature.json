@@ -1,0 +1,7 @@
+{
+  "column": "aspect_ratio",
+  "kind": "continuous",
+  "spec": {
+    "kind": "continuous"
+  }
+}

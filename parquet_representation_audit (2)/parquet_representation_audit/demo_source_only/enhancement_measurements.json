@@ -1,0 +1,10 @@
+{
+  "normalization": {
+    "status": "unavailable",
+    "reason": "Source-only mode"
+  },
+  "topology": {
+    "status": "unavailable",
+    "reason": "Source-only mode"
+  }
+}

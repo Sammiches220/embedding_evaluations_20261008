@@ -1,0 +1,15 @@
+{
+  "column": "note_length",
+  "kind": "continuous",
+  "spec": {
+    "kind": "continuous",
+    "semantic_kind": "count",
+    "description": "Derived text_length from product_note",
+    "units": "characters",
+    "family": "",
+    "missing_values": [],
+    "empty_is_missing": false,
+    "min_count": 1,
+    "max_labels": 100
+  }
+}

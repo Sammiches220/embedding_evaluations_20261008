@@ -1,0 +1,55 @@
+row_position,model,true,predicted,true_id,true_name,true_criteria,true_display,true_metadata_known,predicted_id,predicted_name,predicted_criteria,predicted_display,predicted_metadata_known
+0,baseline,1,1,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True
+1,baseline,2,1,2,Segment C,Declared assignment code 2,2 · Segment C,True,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True
+2,baseline,0,1,0,Segment A,Declared assignment code 0,0 · Segment A,True,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True
+13,baseline,1,1,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True
+15,baseline,0,1,0,Segment A,Declared assignment code 0,0 · Segment A,True,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True
+16,baseline,1,1,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True
+26,baseline,2,1,2,Segment C,Declared assignment code 2,2 · Segment C,True,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True
+27,baseline,0,1,0,Segment A,Declared assignment code 0,0 · Segment A,True,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True
+39,baseline,0,1,0,Segment A,Declared assignment code 0,0 · Segment A,True,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True
+40,baseline,1,1,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True
+41,baseline,2,1,2,Segment C,Declared assignment code 2,2 · Segment C,True,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True
+52,baseline,1,1,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True
+53,baseline,2,1,2,Segment C,Declared assignment code 2,2 · Segment C,True,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True
+54,baseline,0,1,0,Segment A,Declared assignment code 0,0 · Segment A,True,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True
+55,baseline,1,1,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True
+64,baseline,2,1,2,Segment C,Declared assignment code 2,2 · Segment C,True,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True
+65,baseline,1,1,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True
+75,baseline,1,1,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True
+76,baseline,2,1,2,Segment C,Declared assignment code 2,2 · Segment C,True,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True
+77,baseline,0,1,0,Segment A,Declared assignment code 0,0 · Segment A,True,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True
+87,baseline,2,1,2,Segment C,Declared assignment code 2,2 · Segment C,True,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True
+88,baseline,0,1,0,Segment A,Declared assignment code 0,0 · Segment A,True,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True
+89,baseline,1,1,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True
+100,baseline,2,1,2,Segment C,Declared assignment code 2,2 · Segment C,True,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True
+101,baseline,0,1,0,Segment A,Declared assignment code 0,0 · Segment A,True,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True
+110,baseline,0,1,0,Segment A,Declared assignment code 0,0 · Segment A,True,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True
+111,baseline,1,1,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True
+0,linear,1,1,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True
+1,linear,2,2,2,Segment C,Declared assignment code 2,2 · Segment C,True,2,Segment C,Declared assignment code 2,2 · Segment C,True
+2,linear,0,0,0,Segment A,Declared assignment code 0,0 · Segment A,True,0,Segment A,Declared assignment code 0,0 · Segment A,True
+13,linear,1,1,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True
+15,linear,0,0,0,Segment A,Declared assignment code 0,0 · Segment A,True,0,Segment A,Declared assignment code 0,0 · Segment A,True
+16,linear,1,1,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True
+26,linear,2,2,2,Segment C,Declared assignment code 2,2 · Segment C,True,2,Segment C,Declared assignment code 2,2 · Segment C,True
+27,linear,0,0,0,Segment A,Declared assignment code 0,0 · Segment A,True,0,Segment A,Declared assignment code 0,0 · Segment A,True
+39,linear,0,0,0,Segment A,Declared assignment code 0,0 · Segment A,True,0,Segment A,Declared assignment code 0,0 · Segment A,True
+40,linear,1,1,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True
+41,linear,2,2,2,Segment C,Declared assignment code 2,2 · Segment C,True,2,Segment C,Declared assignment code 2,2 · Segment C,True
+52,linear,1,1,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True
+53,linear,2,2,2,Segment C,Declared assignment code 2,2 · Segment C,True,2,Segment C,Declared assignment code 2,2 · Segment C,True
+54,linear,0,0,0,Segment A,Declared assignment code 0,0 · Segment A,True,0,Segment A,Declared assignment code 0,0 · Segment A,True
+55,linear,1,1,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True
+64,linear,2,2,2,Segment C,Declared assignment code 2,2 · Segment C,True,2,Segment C,Declared assignment code 2,2 · Segment C,True
+65,linear,1,1,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True
+75,linear,1,1,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True
+76,linear,2,2,2,Segment C,Declared assignment code 2,2 · Segment C,True,2,Segment C,Declared assignment code 2,2 · Segment C,True
+77,linear,0,0,0,Segment A,Declared assignment code 0,0 · Segment A,True,0,Segment A,Declared assignment code 0,0 · Segment A,True
+87,linear,2,2,2,Segment C,Declared assignment code 2,2 · Segment C,True,2,Segment C,Declared assignment code 2,2 · Segment C,True
+88,linear,0,0,0,Segment A,Declared assignment code 0,0 · Segment A,True,0,Segment A,Declared assignment code 0,0 · Segment A,True
+89,linear,1,1,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True
+100,linear,2,2,2,Segment C,Declared assignment code 2,2 · Segment C,True,2,Segment C,Declared assignment code 2,2 · Segment C,True
+101,linear,0,0,0,Segment A,Declared assignment code 0,0 · Segment A,True,0,Segment A,Declared assignment code 0,0 · Segment A,True
+110,linear,0,0,0,Segment A,Declared assignment code 0,0 · Segment A,True,0,Segment A,Declared assignment code 0,0 · Segment A,True
+111,linear,1,1,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True

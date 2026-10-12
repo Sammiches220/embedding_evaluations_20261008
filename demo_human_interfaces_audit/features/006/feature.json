@@ -1,0 +1,7 @@
+{
+  "column": "megapixels",
+  "kind": "continuous",
+  "spec": {
+    "kind": "continuous"
+  }
+}

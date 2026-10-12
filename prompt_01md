@@ -1,0 +1,16 @@
+Thank you. Now, I am interested in potentially how to translate to human interpretibility and usability. All of these approaches seem perfectly in the direction I am interested in, though I struggle to wrap my thoughts around what humans can actually do.
+
+I want you to please provide another markdown file that discusses what might be some usable interfaces for this sort of approach.
+
+For example, maybe what actions / questions humans can answer.
+- "How well do these embeddings preserve this feature/tag?" 
+- "What are the differences between here and there?" 
+- "What's so special about this region?"
+- "Is this embedding good at preserving this? If I had another set of embeddings is that set better at preserving this feature / tag?"
+- "Where is this set of tags / features most present based off of these measurements?"
+- Etc... I may be missing some usage and so use your discretion to discuss core approaches.
+
+I want you to incorporate not only these nice presentations of the values, but also provide natural language explanations inside of the report itself.
+
+
+I do want you to first provide such a downloadable markdown file, but I will be asking you to implement some of the major approaches onto the overarching project.

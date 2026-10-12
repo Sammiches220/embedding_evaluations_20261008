@@ -1,0 +1,5 @@
+label,label_name,label_criteria,n_known_source
+-1,Unassigned,Synthetic missing assignment,0
+0,Segment A,Declared assignment code 0,50
+1,Segment A,Distinct computational ID 1 despite duplicate display name,50
+2,Segment C,Declared assignment code 2,50

@@ -1,0 +1,5 @@
+label,count,prevalence,group
+false,49,0.8305084745762712,"[""str"", ""north""]"
+true,10,0.1694915254237288,"[""str"", ""north""]"
+false,48,0.8,"[""str"", ""south""]"
+true,12,0.2,"[""str"", ""south""]"

@@ -1,0 +1,7 @@
+label,count,prevalence,group
+books,18,0.3050847457627119,"[""str"", ""north""]"
+kitchen,19,0.3220338983050847,"[""str"", ""north""]"
+outdoors,22,0.3728813559322034,"[""str"", ""north""]"
+books,21,0.35,"[""str"", ""south""]"
+kitchen,16,0.26666666666666666,"[""str"", ""south""]"
+outdoors,23,0.38333333333333336,"[""str"", ""south""]"
