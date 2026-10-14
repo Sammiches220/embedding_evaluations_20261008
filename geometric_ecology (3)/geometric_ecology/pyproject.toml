@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "geometric-ecology"
+version = "0.5.0"
+description = "A validation-first prototype for corpus-relative geometric terrain and human navigation"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24,<3", "scipy>=1.14,<2", "scikit-learn>=1.3,<2", "threadpoolctl>=3,<4", "contourpy>=1.1,<2"]
+
+[project.scripts]
+geometric-ecology = "geometric_ecology.cli:main"
+
+[tool.setuptools.package-data]
+geometric_ecology = ["explorer.html", "terrain_lab.html", "geometry_views.js", "terrain_overlay.js", "mesh_gl.js", "mesh_view.js", "flat_view.js"]

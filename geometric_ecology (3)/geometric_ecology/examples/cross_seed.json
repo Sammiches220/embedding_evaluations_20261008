@@ -1,0 +1,170 @@
+[
+  {
+    "seed": 7,
+    "mechanism_checks": [
+      {
+        "question": "High-dimensional patch vs basins",
+        "measurement": "local_dimension",
+        "auc": 0.9753706067150991,
+        "interpretation": "Probability a planted positive has a larger oriented measurement than a planted negative; post-hoc synthetic diagnostic."
+      },
+      {
+        "question": "Redundant patch vs basins",
+        "measurement": "neighbor_radius",
+        "auc": 0.9998232868643235,
+        "interpretation": "Probability a planted positive has a larger oriented measurement than a planted negative; post-hoc synthetic diagnostic."
+      },
+      {
+        "question": "Connector vs basins",
+        "measurement": "sampled_betweenness",
+        "auc": 0.9381025127745878,
+        "interpretation": "Probability a planted positive has a larger oriented measurement than a planted negative; post-hoc synthetic diagnostic."
+      },
+      {
+        "question": "Outliers vs basins",
+        "measurement": "neighbor_radius",
+        "auc": 1.0,
+        "interpretation": "Probability a planted positive has a larger oriented measurement than a planted negative; post-hoc synthetic diagnostic."
+      }
+    ],
+    "heldout": {
+      "train_n": 880,
+      "heldout_n": 220,
+      "test_not_used_to_fit_map": true,
+      "query_noise_chord": 0.05,
+      "target": "unperturbed query's nearest training anchor",
+      "anchor_top1": 0.5636363636363636,
+      "anchor_top10": 0.8863636363636364,
+      "anchor_median_rank": 1.0,
+      "random_anchor_top10_expectation": 0.011363636363636364,
+      "cell_centroid_top1": 0.7318181818181818,
+      "majority_cell_baseline": 0.22727272727272727,
+      "compressed_anchor_top10": 0.7272727272727273,
+      "limits": "Direct retrieval is the strong baseline. Cell recovery can be trivial when one cell dominates. This measures geometric anchor recovery, not usefulness to people."
+    },
+    "observed": {
+      "cohesion_distance": 0.037264212810744844,
+      "local_dimension": 2.8292087936868224,
+      "resample_jaccard": 0.7916666666666667,
+      "perturbation_jaccard": 0.8461538461538461,
+      "projection_jaccard": 0.09090909090909091,
+      "deletion_pair_loss": 0.0,
+      "effective_next_hops": 8.152987919692489,
+      "components": 27,
+      "largest_component_share": 0.49,
+      "articulations": 25
+    }
+  },
+  {
+    "seed": 42,
+    "mechanism_checks": [
+      {
+        "question": "High-dimensional patch vs basins",
+        "measurement": "local_dimension",
+        "auc": 0.9643873944629884,
+        "interpretation": "Probability a planted positive has a larger oriented measurement than a planted negative; post-hoc synthetic diagnostic."
+      },
+      {
+        "question": "Redundant patch vs basins",
+        "measurement": "neighbor_radius",
+        "auc": 1.0,
+        "interpretation": "Probability a planted positive has a larger oriented measurement than a planted negative; post-hoc synthetic diagnostic."
+      },
+      {
+        "question": "Connector vs basins",
+        "measurement": "sampled_betweenness",
+        "auc": 0.9509297792761945,
+        "interpretation": "Probability a planted positive has a larger oriented measurement than a planted negative; post-hoc synthetic diagnostic."
+      },
+      {
+        "question": "Outliers vs basins",
+        "measurement": "neighbor_radius",
+        "auc": 1.0,
+        "interpretation": "Probability a planted positive has a larger oriented measurement than a planted negative; post-hoc synthetic diagnostic."
+      }
+    ],
+    "heldout": {
+      "train_n": 880,
+      "heldout_n": 220,
+      "test_not_used_to_fit_map": true,
+      "query_noise_chord": 0.05,
+      "target": "unperturbed query's nearest training anchor",
+      "anchor_top1": 0.5590909090909091,
+      "anchor_top10": 0.8636363636363636,
+      "anchor_median_rank": 1.0,
+      "random_anchor_top10_expectation": 0.011363636363636364,
+      "cell_centroid_top1": 0.7090909090909091,
+      "majority_cell_baseline": 0.2318181818181818,
+      "compressed_anchor_top10": 0.7272727272727273,
+      "limits": "Direct retrieval is the strong baseline. Cell recovery can be trivial when one cell dominates. This measures geometric anchor recovery, not usefulness to people."
+    },
+    "observed": {
+      "cohesion_distance": 0.03726421230627845,
+      "local_dimension": 2.8826821242029177,
+      "resample_jaccard": 0.7916666666666667,
+      "perturbation_jaccard": 0.8461538461538461,
+      "projection_jaccard": 0.09090909090909091,
+      "deletion_pair_loss": 0.0,
+      "effective_next_hops": 7.832039562583281,
+      "components": 23,
+      "largest_component_share": 0.48727272727272725,
+      "articulations": 24
+    }
+  },
+  {
+    "seed": 101,
+    "mechanism_checks": [
+      {
+        "question": "High-dimensional patch vs basins",
+        "measurement": "local_dimension",
+        "auc": 0.9792730217946201,
+        "interpretation": "Probability a planted positive has a larger oriented measurement than a planted negative; post-hoc synthetic diagnostic."
+      },
+      {
+        "question": "Redundant patch vs basins",
+        "measurement": "neighbor_radius",
+        "auc": 1.0,
+        "interpretation": "Probability a planted positive has a larger oriented measurement than a planted negative; post-hoc synthetic diagnostic."
+      },
+      {
+        "question": "Connector vs basins",
+        "measurement": "sampled_betweenness",
+        "auc": 0.7892719801928041,
+        "interpretation": "Probability a planted positive has a larger oriented measurement than a planted negative; post-hoc synthetic diagnostic."
+      },
+      {
+        "question": "Outliers vs basins",
+        "measurement": "neighbor_radius",
+        "auc": 1.0,
+        "interpretation": "Probability a planted positive has a larger oriented measurement than a planted negative; post-hoc synthetic diagnostic."
+      }
+    ],
+    "heldout": {
+      "train_n": 880,
+      "heldout_n": 220,
+      "test_not_used_to_fit_map": true,
+      "query_noise_chord": 0.05,
+      "target": "unperturbed query's nearest training anchor",
+      "anchor_top1": 0.5727272727272728,
+      "anchor_top10": 0.8909090909090909,
+      "anchor_median_rank": 1.0,
+      "random_anchor_top10_expectation": 0.011363636363636364,
+      "cell_centroid_top1": 0.7090909090909091,
+      "majority_cell_baseline": 0.20909090909090908,
+      "compressed_anchor_top10": 0.8,
+      "limits": "Direct retrieval is the strong baseline. Cell recovery can be trivial when one cell dominates. This measures geometric anchor recovery, not usefulness to people."
+    },
+    "observed": {
+      "cohesion_distance": 0.03726421156898141,
+      "local_dimension": 2.726628623475479,
+      "resample_jaccard": 0.8125,
+      "perturbation_jaccard": 0.8461538461538461,
+      "projection_jaccard": 0.09090909090909091,
+      "deletion_pair_loss": 0.0,
+      "effective_next_hops": 8.273079572253476,
+      "components": 20,
+      "largest_component_share": 0.49272727272727274,
+      "articulations": 22
+    }
+  }
+]

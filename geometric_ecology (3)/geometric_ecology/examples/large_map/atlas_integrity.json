@@ -1,0 +1,9 @@
+{
+  "all_points": 20000,
+  "roads_checked": 82,
+  "narrow_segments_checked": 6,
+  "grouped_passes": 1,
+  "pass_anchor_planted_groups": [
+    "narrow connector"
+  ]
+}

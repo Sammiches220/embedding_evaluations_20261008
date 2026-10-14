@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "encoder": "synthetic-mechanisms-v1/seed-42",
+  "n": 1100,
+  "dimensions": 48,
+  "metric": "unit-normalized Euclidean chord",
+  "normalization": "L2 per row, float32",
+  "backend": "exact batched brute-force",
+  "scales": [
+    6,
+    12,
+    24
+  ],
+  "signature_k": 12,
+  "edge_support_threshold": 0.5,
+  "resamples": 4,
+  "seed": 42,
+  "corpus_sha256": "c1597b6be3ba14d94ce24dc14d2b7c238b6d68eb6b12ec4f8567bf61212b8658",
+  "ids_sha256": "b7138cfd7b272d0e77d923d823215efc53cf23fa3ff9090ddbfc466dae84e4cb",
+  "duplicate_rows": 0,
+  "navigation_partition": "graph Voronoi; farthest-point seeds; small components preserved",
+  "requested_large_component_cells": 8,
+  "components": 23,
+  "regions": 25,
+  "display_explained_variance": 0.6706972122192383,
+  "timings": {
+    "neighbors_s": 0.025377684999966732,
+    "build_total_s": 0.3703439830001116
+  },
+  "python": "3.12.14",
+  "dependencies": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "scikit-learn": "1.8.0",
+    "threadpoolctl": "3.6.0"
+  }
+}

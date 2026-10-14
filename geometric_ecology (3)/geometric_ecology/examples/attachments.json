@@ -1,0 +1,387 @@
+{
+  "corpus_sha256": "c1597b6be3ba14d94ce24dc14d2b7c238b6d68eb6b12ec4f8567bf61212b8658",
+  "queries": [
+    {
+      "neighbors": [
+        {
+          "id": "demo-00040",
+          "index": 40,
+          "distance": 0.006419513374567032
+        },
+        {
+          "id": "demo-00014",
+          "index": 14,
+          "distance": 0.01583913527429104
+        },
+        {
+          "id": "demo-00024",
+          "index": 24,
+          "distance": 0.016314638778567314
+        },
+        {
+          "id": "demo-00190",
+          "index": 190,
+          "distance": 0.01851438544690609
+        },
+        {
+          "id": "demo-00090",
+          "index": 90,
+          "distance": 0.019488291814923286
+        },
+        {
+          "id": "demo-00133",
+          "index": 133,
+          "distance": 0.021032268181443214
+        },
+        {
+          "id": "demo-00073",
+          "index": 73,
+          "distance": 0.022829873487353325
+        },
+        {
+          "id": "demo-00189",
+          "index": 189,
+          "distance": 0.02283099852502346
+        },
+        {
+          "id": "demo-00095",
+          "index": 95,
+          "distance": 0.023053167387843132
+        },
+        {
+          "id": "demo-00205",
+          "index": 205,
+          "distance": 0.025454502552747726
+        },
+        {
+          "id": "demo-00146",
+          "index": 146,
+          "distance": 0.025481490418314934
+        },
+        {
+          "id": "demo-00083",
+          "index": 83,
+          "distance": 0.02574232593178749
+        }
+      ],
+      "cohesion_distance": 0.02025004926448067,
+      "local_dimension": 2.847091579034956,
+      "cohesion_resample_p10_p90": [
+        0.021386126258100074,
+        0.02195896386789779
+      ],
+      "region_attachment_mass": {
+        "0": 1.0
+      },
+      "component_attachment_mass": {
+        "0": 1.0
+      },
+      "effective_candidate_regions": 1.0,
+      "reference_radius_percentile": 0.13272727272727272,
+      "insertion_reverse_neighbor_count": 16,
+      "compression": {
+        "pca_12": 0.7142857142857143,
+        "pca_24": 1.0,
+        "pca_40": 1.0,
+        "coordinate_mask": 0.8461538461538461
+      },
+      "nearest_landmarks": [
+        98,
+        181,
+        983
+      ],
+      "landmark_attachments": [
+        {
+          "landmark_index": 98,
+          "entry_anchor": 40,
+          "path": [
+            40,
+            14,
+            95,
+            98
+          ],
+          "cost_including_query_entry": 0.04184348693135941
+        },
+        {
+          "landmark_index": 181,
+          "entry_anchor": null,
+          "path": [],
+          "cost_including_query_entry": null
+        },
+        {
+          "landmark_index": 983,
+          "entry_anchor": null,
+          "path": [],
+          "cost_including_query_entry": null
+        }
+      ],
+      "neighbor_scale_support_proxy": 0.7119042533036021,
+      "neighbor_perturbation_stability_proxy": 0.7499604590306258,
+      "attachment_boundary_mass": 0.0,
+      "structural_influence": null,
+      "interpretation": "concentrated cell attachment",
+      "limits": "No new component or persistent bridge is inferred. Ranges are perturbation sensitivity, not confidence intervals. Exact search is O(n*d)."
+    },
+    {
+      "neighbors": [
+        {
+          "id": "demo-00490",
+          "index": 490,
+          "distance": 0.005766505375504494
+        },
+        {
+          "id": "demo-00489",
+          "index": 489,
+          "distance": 0.015019670128822327
+        },
+        {
+          "id": "demo-00491",
+          "index": 491,
+          "distance": 0.015362221747636795
+        },
+        {
+          "id": "demo-00488",
+          "index": 488,
+          "distance": 0.028145762160420418
+        },
+        {
+          "id": "demo-00492",
+          "index": 492,
+          "distance": 0.028366200625896454
+        },
+        {
+          "id": "demo-00487",
+          "index": 487,
+          "distance": 0.042074620723724365
+        },
+        {
+          "id": "demo-00493",
+          "index": 493,
+          "distance": 0.04207916185259819
+        },
+        {
+          "id": "demo-00486",
+          "index": 486,
+          "distance": 0.0555206760764122
+        },
+        {
+          "id": "demo-00494",
+          "index": 494,
+          "distance": 0.055740147829055786
+        },
+        {
+          "id": "demo-00485",
+          "index": 485,
+          "distance": 0.06933820992708206
+        },
+        {
+          "id": "demo-00495",
+          "index": 495,
+          "distance": 0.0695391371846199
+        },
+        {
+          "id": "demo-00484",
+          "index": 484,
+          "distance": 0.08307456225156784
+        }
+      ],
+      "cohesion_distance": 0.04250223965694507,
+      "local_dimension": 0.930764938161411,
+      "cohesion_resample_p10_p90": [
+        0.05314586727569501,
+        0.0579426066018641
+      ],
+      "region_attachment_mass": {
+        "2": 0.972664156554676,
+        "0": 0.027335843445324186
+      },
+      "component_attachment_mass": {
+        "0": 1.0000000000000002
+      },
+      "effective_candidate_regions": 1.133551563266584,
+      "reference_radius_percentile": 0.7918181818181819,
+      "insertion_reverse_neighbor_count": 11,
+      "compression": {
+        "pca_12": 1.0,
+        "pca_24": 1.0,
+        "pca_40": 1.0,
+        "coordinate_mask": 1.0
+      },
+      "nearest_landmarks": [
+        472,
+        468,
+        89
+      ],
+      "landmark_attachments": [
+        {
+          "landmark_index": 472,
+          "entry_anchor": 490,
+          "path": [
+            490,
+            488,
+            486,
+            483,
+            480,
+            477,
+            475,
+            472
+          ],
+          "cost_including_query_entry": 0.2522667126527222
+        },
+        {
+          "landmark_index": 468,
+          "entry_anchor": 490,
+          "path": [
+            490,
+            488,
+            486,
+            483,
+            480,
+            477,
+            475,
+            472,
+            470,
+            468
+          ],
+          "cost_including_query_entry": 0.3071258558089485
+        },
+        {
+          "landmark_index": 89,
+          "entry_anchor": null,
+          "path": [],
+          "cost_including_query_entry": null
+        }
+      ],
+      "neighbor_scale_support_proxy": 0.5906063896972085,
+      "neighbor_perturbation_stability_proxy": 1.0000000000000002,
+      "attachment_boundary_mass": 0.027335843445324026,
+      "structural_influence": null,
+      "interpretation": "concentrated cell attachment",
+      "limits": "No new component or persistent bridge is inferred. Ranges are perturbation sensitivity, not confidence intervals. Exact search is O(n*d)."
+    },
+    {
+      "neighbors": [
+        {
+          "id": "demo-01062",
+          "index": 1062,
+          "distance": 1.2203789949417114
+        },
+        {
+          "id": "demo-01095",
+          "index": 1095,
+          "distance": 1.22706139087677
+        },
+        {
+          "id": "demo-01099",
+          "index": 1099,
+          "distance": 1.258956789970398
+        },
+        {
+          "id": "demo-01071",
+          "index": 1071,
+          "distance": 1.2971384525299072
+        },
+        {
+          "id": "demo-01082",
+          "index": 1082,
+          "distance": 1.3035635948181152
+        },
+        {
+          "id": "demo-00901",
+          "index": 901,
+          "distance": 1.306756854057312
+        },
+        {
+          "id": "demo-00887",
+          "index": 887,
+          "distance": 1.309175968170166
+        },
+        {
+          "id": "demo-00906",
+          "index": 906,
+          "distance": 1.3097426891326904
+        },
+        {
+          "id": "demo-00917",
+          "index": 917,
+          "distance": 1.31017005443573
+        },
+        {
+          "id": "demo-00894",
+          "index": 894,
+          "distance": 1.3102421760559082
+        },
+        {
+          "id": "demo-00928",
+          "index": 928,
+          "distance": 1.3109471797943115
+        },
+        {
+          "id": "demo-00911",
+          "index": 911,
+          "distance": 1.3112003803253174
+        }
+      ],
+      "cohesion_distance": 1.2896112104256947,
+      "local_dimension": 49.22516873656948,
+      "cohesion_resample_p10_p90": [
+        1.2904424130916596,
+        1.2961454550425213
+      ],
+      "region_attachment_mass": {
+        "17": 0.4257584958113272,
+        "14": 0.5742415041886729
+      },
+      "component_attachment_mass": {
+        "12": 0.5742415041886729,
+        "15": 0.4257584958113272
+      },
+      "effective_candidate_regions": 1.977993032251466,
+      "reference_radius_percentile": 0.9890909090909091,
+      "insertion_reverse_neighbor_count": 5,
+      "compression": {
+        "pca_12": 0.2,
+        "pca_24": 0.2631578947368421,
+        "pca_40": 0.7142857142857143,
+        "coordinate_mask": 0.2
+      },
+      "nearest_landmarks": [
+        915,
+        1064,
+        932
+      ],
+      "landmark_attachments": [
+        {
+          "landmark_index": 915,
+          "entry_anchor": null,
+          "path": [],
+          "cost_including_query_entry": null
+        },
+        {
+          "landmark_index": 1064,
+          "entry_anchor": null,
+          "path": [],
+          "cost_including_query_entry": null
+        },
+        {
+          "landmark_index": 932,
+          "entry_anchor": 901,
+          "path": [
+            901,
+            928,
+            942,
+            931,
+            932
+          ],
+          "cost_including_query_entry": 1.442746839871937
+        }
+      ],
+      "neighbor_scale_support_proxy": 0.6997277863560705,
+      "neighbor_perturbation_stability_proxy": 0.9135909037955835,
+      "attachment_boundary_mass": 0.4257584958113271,
+      "structural_influence": null,
+      "interpretation": "sparser than 95% of reference neighborhoods",
+      "limits": "No new component or persistent bridge is inferred. Ranges are perturbation sensitivity, not confidence intervals. Exact search is O(n*d)."
+    }
+  ]
+}

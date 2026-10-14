@@ -1,0 +1,7 @@
+# Versions of the included measured run (Python 3.12.14 on Linux).
+# For a broader supported install, use `pip install -e .` instead.
+numpy==2.3.5
+scipy==1.17.0
+scikit-learn==1.8.0
+threadpoolctl==3.6.0
+contourpy==1.3.3
