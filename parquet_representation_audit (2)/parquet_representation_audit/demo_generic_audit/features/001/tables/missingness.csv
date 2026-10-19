@@ -1,2 +1,0 @@
-mode,missing_fraction,n_hidden,n_train,status,n_compared,accuracy,balanced_accuracy,macro_f1,micro_f1,entropy_delta,normalized_entropy_delta,largest_label_share_delta,n_labels_delta,jensen_shannon_divergence,reconstructed_entropy_delta,reconstructed_normalized_entropy_delta,reconstructed_largest_label_share_delta,reconstructed_n_labels_delta,reconstructed_jensen_shannon_divergence
-random,0.2,24,52,ok,24,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0,0.0

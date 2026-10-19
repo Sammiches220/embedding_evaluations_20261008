@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Feature label metadata",
+  "type": "object",
+  "required": ["id_type", "labels", "excluded_from_coverage"],
+  "properties": {
+    "id_type": {"enum": ["string", "integer", "boolean"]},
+    "labels": {"type": "array", "items": {"type": "object", "required": ["id"], "properties": {"id": {}, "name": {"type": "string"}, "description": {"type": "string"}}, "additionalProperties": true}},
+    "excluded_from_coverage": {"type": "array"}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Dataset schema",
+  "type": "object",
+  "required": ["schema_version", "status", "dataset", "columns", "embeddings", "prediction_pipelines"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "status": {"enum": ["ready", "draft"]},
+    "unresolved": {"type": "array", "items": {"type": "string"}},
+    "dataset": {"type": "object", "required": ["path"], "properties": {"path": {"type": "string"}, "identity_columns": {"type": "array", "items": {"type": "string"}}, "row_identity": {"type": "string"}, "unmapped_columns": {"enum": ["error", "ignore"]}}, "additionalProperties": true},
+    "columns": {"type": "object", "minProperties": 1, "additionalProperties": {"type": "object", "required": ["role"], "properties": {"role": {"enum": ["id", "feature", "embedding", "group", "split", "stratum", "prediction", "probabilities", "ignore"]}, "kind": {"enum": ["cluster_label", "categorical", "boolean", "ordinal", "numeric", "count", "multilabel", "datetime", "text"]}}, "allOf": [{"if": {"properties": {"role": {"const": "feature"}}, "required": ["role"]}, "then": {"required": ["kind"]}}, {"if": {"properties": {"role": {"const": "id"}}, "required": ["role"]}, "then": {"properties": {"id_type": {"enum": ["string", "integer", "boolean"]}}}}, {"if": {"properties": {"role": {"const": "embedding"}}, "required": ["role"]}, "then": {"required": ["expected_dimension"], "properties": {"expected_dimension": {"type": "integer", "minimum": 1}}}}, {"if": {"properties": {"kind": {"const": "multilabel"}}, "required": ["kind"]}, "then": {"required": ["encoding"], "properties": {"encoding": {"enum": ["list", "delimited", "json"]}}}}, {"if": {"properties": {"kind": {"const": "ordinal"}}, "required": ["kind"]}, "then": {"required": ["order"]}}, {"if": {"properties": {"kind": {"const": "datetime"}}, "required": ["kind"]}, "then": {"required": ["timezone"]}}], "additionalProperties": true}},
+    "embeddings": {"type": "array", "items": {"type": "object", "required": ["name", "main_normalization", "expected_dimension"], "properties": {"name": {"type": "string"}, "main_normalization": {"enum": ["none", "l2"]}, "expected_dimension": {"type": "integer", "minimum": 1}}, "additionalProperties": true}},
+    "neighbors": {"type": "array", "items": {"type": "object"}},
+    "prediction_pipelines": {"type": "object", "additionalProperties": {"type": "object"}},
+    "prediction_assets": {"type": "array", "items": {"type": "object"}}
+  },
+  "additionalProperties": true
+}

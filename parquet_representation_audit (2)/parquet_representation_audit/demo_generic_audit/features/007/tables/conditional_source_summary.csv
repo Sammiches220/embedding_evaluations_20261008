@@ -1,3 +1,0 @@
-group,n_items,n_known,coverage,missing_share,n_labels,n_audited_labels,entropy,normalized_entropy,largest_label_share,largest_item_prevalence,mean_labels_per_known_item,audited_occurrence_share
-"[""str"", ""north""]",59,55,0.9322033898305084,0.06779661016949157,3,3,1.0161055228906752,0.9248991053272664,0.53125,0.6181818181818182,1.1636363636363636,1.0
-"[""str"", ""south""]",60,56,0.9333333333333333,0.06666666666666665,3,3,0.9576231770067114,0.8716661800385239,0.5932203389830508,0.625,1.0535714285714286,1.0

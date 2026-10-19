@@ -1,3 +1,0 @@
-group,n_items,n_known,coverage,missing_share,n_labels,n_audited_labels,entropy,normalized_entropy,largest_label_share
-"[""str"", ""north""]",59,56,0.9491525423728814,0.05084745762711862,3,3,1.0945250892480327,0.9962796707607994,0.375
-"[""str"", ""south""]",60,57,0.95,0.050000000000000044,3,3,1.0902671602225884,0.992403936737647,0.38596491228070173

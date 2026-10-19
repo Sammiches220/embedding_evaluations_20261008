@@ -1,7 +1,0 @@
-label,count,prevalence,group,label_id,label_name,label_criteria,label_display,label_metadata_known
-0,18,0.32142857142857145,"[""str"", ""north""]",0,Segment A,Declared assignment code 0,0 · Segment A,True
-1,21,0.375,"[""str"", ""north""]",1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True
-2,17,0.30357142857142855,"[""str"", ""north""]",2,Segment C,Declared assignment code 2,2 · Segment C,True
-0,16,0.2807017543859649,"[""str"", ""south""]",0,Segment A,Declared assignment code 0,0 · Segment A,True
-1,22,0.38596491228070173,"[""str"", ""south""]",1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True
-2,19,0.3333333333333333,"[""str"", ""south""]",2,Segment C,Declared assignment code 2,2 · Segment C,True

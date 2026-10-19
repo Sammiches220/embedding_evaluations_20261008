@@ -1,0 +1,15 @@
+{
+  "mode": "embedding",
+  "seed": 42,
+  "verbose": true,
+  "source": {"scope": "full", "batch_rows": 4096, "max_feature_columns": 200, "max_vocabulary": 100000, "quantile_sample_size": 100000},
+  "sample": {"strategy": "uniform_rows", "max_rows": 5000},
+  "geometry": {"enabled": true, "metric": "cosine", "ks": [5, 10, 20, 50], "reference": "full_source", "invalid_embeddings": "exclude", "distance_cap": 10000, "distance_pairs": 200000},
+  "limits": {"max_evaluation_rows": 10000, "max_exact_pairs": 50000000, "max_embedding_bytes": 2000000000, "max_external_ids": 10000000, "max_dense_feature_bytes": 1000000000, "max_work_units": 10000000000, "max_source_batch_bytes": 536870912, "max_source_batch_cells": 50000000, "external_batch_rows": 2048},
+  "nulls": {"permutations": 20, "modes": ["permutation"], "correction": "bh", "testing_family": "all_features_scales_modes_per_metric"},
+  "probes": {"enabled": true, "models": ["baseline", "linear"], "max_labels": 100, "trees": 100, "regularization_grid": [1.0]},
+  "normalization": {"enabled": false, "features": true, "variants": ["raw_standardized", "unit", "unit_standardized", "norm_only"], "max_rows": 10000, "regularization_grid": [1.0]},
+  "topology": {"enabled": false, "features": true, "spaces": ["unit_chordal"], "sample_size": 512, "repetitions": 3, "quantiles": [0, 0.001, 0.005, 0.01, 0.025, 0.05, 0.1, 0.25, 0.5, 1], "radii": {}, "permutations": 20, "min_component_known": 1, "min_retained_share": 0.5, "null_mode": "permutation", "h1": true, "h1_sample_size": 64, "max_simplices": 100000, "max_distance_bytes": 256000000},
+  "missingness": {"enabled": false, "features": true, "fractions": [0.1, 0.25, 0.5], "modes": ["random"]},
+  "report": {"title": "Embedding feature audit", "overview": {"min_known": 30, "min_test": 30, "min_known_neighbor_share": 0.5, "neutral_delta": 0.02, "probe_neutral_delta": 0.02, "trusted_ks": [5, 10, 20, 50], "metric_thresholds": {}}, "row_explorer": true, "max_rows": 10000, "max_bytes": 100000000, "pca": true}
+}

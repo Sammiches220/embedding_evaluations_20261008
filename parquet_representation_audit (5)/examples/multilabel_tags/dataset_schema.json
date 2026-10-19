@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "dataset": {
+    "path": "data.parquet",
+    "identity_columns": [
+      "product_id"
+    ],
+    "unmapped_columns": "error"
+  },
+  "columns": {
+    "product_id": {
+      "role": "id",
+      "id_type": "string"
+    },
+    "feature_1": {
+      "role": "feature",
+      "kind": "numeric"
+    },
+    "feature_2": {
+      "role": "feature",
+      "kind": "numeric"
+    },
+    "feature_3": {
+      "role": "feature",
+      "kind": "numeric"
+    },
+    "price_usd": {
+      "role": "feature",
+      "kind": "numeric",
+      "units": "USD"
+    },
+    "tags": {
+      "role": "feature",
+      "kind": "multilabel",
+      "encoding": "list",
+      "description": "A co-occurring set of tags per product.",
+      "empty_is_unknown": false
+    }
+  },
+  "embeddings": [
+    {
+      "name": "signal_embedding",
+      "matrix_path": "embedding_a.npy",
+      "ids_path": "embedding_a_ids.npy",
+      "expected_dimension": 16,
+      "main_normalization": "l2",
+      "missing_ids": "error"
+    },
+    {
+      "name": "noisier_embedding",
+      "matrix_path": "embedding_b.npy",
+      "ids_path": "embedding_b_ids.npy",
+      "expected_dimension": 16,
+      "main_normalization": "l2",
+      "missing_ids": "error"
+    }
+  ],
+  "prediction_pipelines": {}
+}

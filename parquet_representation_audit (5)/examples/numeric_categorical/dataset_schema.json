@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "dataset": {
+    "path": "data.parquet",
+    "identity_columns": [
+      "customer_id"
+    ],
+    "unmapped_columns": "error"
+  },
+  "columns": {
+    "customer_id": {
+      "role": "id",
+      "id_type": "string"
+    },
+    "age_years": {
+      "role": "feature",
+      "kind": "count",
+      "units": "years",
+      "description": "Integer customer age."
+    },
+    "annual_income_usd": {
+      "role": "feature",
+      "kind": "numeric",
+      "units": "USD/year",
+      "description": "Continuous income; retain its raw value."
+    },
+    "tenure_days": {
+      "role": "feature",
+      "kind": "count",
+      "units": "days"
+    },
+    "plan_type": {
+      "role": "feature",
+      "kind": "categorical",
+      "id_type": "string"
+    },
+    "monthly_spend_usd": {
+      "role": "feature",
+      "kind": "numeric",
+      "units": "USD/month"
+    },
+    "churned": {
+      "role": "feature",
+      "kind": "boolean"
+    }
+  },
+  "embeddings": [
+    {
+      "name": "signal_embedding",
+      "matrix_path": "embedding_a.npy",
+      "ids_path": "embedding_a_ids.npy",
+      "expected_dimension": 16,
+      "main_normalization": "l2",
+      "missing_ids": "error"
+    },
+    {
+      "name": "noisier_embedding",
+      "matrix_path": "embedding_b.npy",
+      "ids_path": "embedding_b_ids.npy",
+      "expected_dimension": 16,
+      "main_normalization": "l2",
+      "missing_ids": "error"
+    }
+  ],
+  "prediction_pipelines": {}
+}

@@ -1,4 +1,0 @@
-label,count,prevalence,label_id,label_name,label_criteria,label_display,label_metadata_known
-0,34,0.3008849557522124,0,Segment A,Declared assignment code 0,0 · Segment A,True
-1,43,0.3805309734513274,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True
-2,36,0.3185840707964602,2,Segment C,Declared assignment code 2,2 · Segment C,True

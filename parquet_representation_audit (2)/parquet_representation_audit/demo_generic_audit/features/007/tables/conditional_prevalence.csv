@@ -1,7 +1,0 @@
-label,count,prevalence,occurrence_share,audited,group
-daily,34,0.6181818181818182,0.53125,True,"[""str"", ""north""]"
-gift,15,0.2727272727272727,0.234375,True,"[""str"", ""north""]"
-seasonal,15,0.2727272727272727,0.234375,True,"[""str"", ""north""]"
-daily,35,0.625,0.5932203389830508,True,"[""str"", ""south""]"
-gift,12,0.21428571428571427,0.2033898305084746,True,"[""str"", ""south""]"
-seasonal,12,0.21428571428571427,0.2033898305084746,True,"[""str"", ""south""]"

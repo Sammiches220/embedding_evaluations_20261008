@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Audit configuration",
+  "type": "object",
+  "required": ["mode", "seed", "verbose", "source", "sample", "geometry", "limits", "nulls", "probes", "normalization", "topology", "missingness", "report"],
+  "properties": {
+    "mode": {"enum": ["embedding", "source_only"]},
+    "seed": {"type": "integer"},
+    "verbose": {"type": "boolean"},
+    "source": {"type": "object"}, "sample": {"type": "object"}, "geometry": {"type": "object"},
+    "limits": {"type": "object"}, "nulls": {"type": "object"}, "probes": {"type": "object"},
+    "normalization": {"type": "object"}, "topology": {"type": "object"},
+    "missingness": {"type": "object"}, "report": {"type": "object"}, "comparison": {"type": "object"}
+  },
+  "additionalProperties": true
+}

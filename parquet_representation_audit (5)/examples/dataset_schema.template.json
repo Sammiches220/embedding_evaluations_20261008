@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "dataset": {
+    "path": "data/items.parquet",
+    "identity_columns": ["item_id"],
+    "unmapped_columns": "error"
+  },
+  "columns": {
+    "item_id": {"role": "id", "id_type": "string"},
+    "embedding": {"role": "embedding", "expected_dimension": 768},
+    "cluster_assignment": {
+      "role": "feature", "kind": "cluster_label", "id_type": "integer",
+      "description": "One mutually exclusive cluster ID per item.", "geometry": true, "probe": true
+    },
+    "engineered_score": {
+      "role": "feature", "kind": "numeric", "units": "source units",
+      "description": "Continuous engineered score retained without binning.", "geometry": true, "probe": true
+    },
+    "tags": {
+      "role": "feature", "kind": "multilabel", "encoding": "list",
+      "description": "Known set of tags for each item.", "geometry": true, "probe": true,
+      "empty_is_unknown": false, "max_labels": 100
+    },
+    "unused_metadata": {"role": "ignore"}
+  },
+  "embeddings": [
+    {"name": "embedding", "column": "embedding", "main_normalization": "l2", "expected_dimension": 768}
+  ],
+  "prediction_pipelines": {}
+}

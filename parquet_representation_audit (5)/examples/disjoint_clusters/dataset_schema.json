@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "status": "ready",
+  "dataset": {
+    "path": "data.parquet",
+    "identity_columns": [
+      "item_id"
+    ],
+    "unmapped_columns": "error"
+  },
+  "columns": {
+    "item_id": {
+      "role": "id",
+      "id_type": "integer"
+    },
+    "measure_x": {
+      "role": "feature",
+      "kind": "numeric",
+      "units": "standardized coordinate"
+    },
+    "measure_y": {
+      "role": "feature",
+      "kind": "numeric",
+      "units": "standardized coordinate"
+    },
+    "event_count": {
+      "role": "feature",
+      "kind": "count"
+    },
+    "cluster_4": {
+      "role": "feature",
+      "kind": "cluster_label",
+      "id_type": "integer",
+      "description": "Exactly one of four cluster IDs per item."
+    },
+    "cluster_8": {
+      "role": "feature",
+      "kind": "cluster_label",
+      "id_type": "integer",
+      "description": "A second disjoint clustering, also one ID per item."
+    }
+  },
+  "embeddings": [
+    {
+      "name": "signal_embedding",
+      "matrix_path": "embedding_a.npy",
+      "ids_path": "embedding_a_ids.npy",
+      "expected_dimension": 16,
+      "main_normalization": "l2",
+      "missing_ids": "error"
+    },
+    {
+      "name": "noisier_embedding",
+      "matrix_path": "embedding_b.npy",
+      "ids_path": "embedding_b_ids.npy",
+      "expected_dimension": 16,
+      "main_normalization": "l2",
+      "missing_ids": "error"
+    }
+  ],
+  "prediction_pipelines": {}
+}

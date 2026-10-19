@@ -1,7 +1,0 @@
-label,precision,recall,f1,support,true_prevalence,predicted_prevalence,roc_auc,average_precision,model,label_id,label_name,label_criteria,label_display,label_metadata_known
-0,0.0,0.0,0.0,9,0.3333333333333333,0.0,0.5,0.3333333333333333,baseline,0,Segment A,Declared assignment code 0,0 · Segment A,True
-1,0.37037037037037035,1.0,0.5405405405405406,10,0.37037037037037035,1.0,0.5,0.37037037037037035,baseline,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True
-2,0.0,0.0,0.0,8,0.2962962962962963,0.0,0.5,0.2962962962962963,baseline,2,Segment C,Declared assignment code 2,2 · Segment C,True
-0,1.0,1.0,1.0,9,0.3333333333333333,0.3333333333333333,1.0,1.0000000000000002,linear,0,Segment A,Declared assignment code 0,0 · Segment A,True
-1,1.0,1.0,1.0,10,0.37037037037037035,0.37037037037037035,1.0,0.9999999999999999,linear,1,Segment A,Distinct computational ID 1 despite duplicate display name,1 · Segment A,True
-2,1.0,1.0,1.0,8,0.2962962962962963,0.2962962962962963,1.0,1.0,linear,2,Segment C,Declared assignment code 2,2 · Segment C,True
